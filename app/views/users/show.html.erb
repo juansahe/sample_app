@@ -14,10 +14,12 @@
   <div class="span8">
     <%= render 'follow_form' if signed_in? %>
     <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <h3 id="microposts_count_show">
+        Microposts (<%= @user.microposts.count %>)
+      </h3>
       <div class="microposts-container">
       	<ol class="microposts">
-        	<%= render @microposts %>
+        	<div id="test"><%= render @microposts %></div>
       	</ol>
       </div>
       <%= will_paginate @microposts %>

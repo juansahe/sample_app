@@ -1,0 +1,2 @@
+$("#microposts_count").html('<%= pluralize(current_user.microposts.count, "micropost") %>')
+$("#feeds-list").html("<%= escape_javascript(render('shared/feed')) %>")

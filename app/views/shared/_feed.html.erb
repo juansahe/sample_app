@@ -1,6 +1,7 @@
+<% @feed_items = current_user.feed.paginate(page: params[:page], :per_page => 9) %>
 <% if @feed_items.any? %>
 	<div class="microposts-container">
-	  <ol class="microposts">
+	  <ol class="microposts" id="feeds-list">
 	    <%= render partial: 'shared/feed_item', collection: @feed_items %>
 	  </ol>
 	</div>
